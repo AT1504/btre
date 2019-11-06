@@ -15,7 +15,12 @@ def index(request):
     return render(request, 'listings/listings.html', context)
 
 def listing(request, listing_id):
-    return render(request, 'listings/listing.html')
+    list = Listing.objects.all().get(id=listing_id)
+    context = {
+        'list':list,
+        'list_id':listing_id
+    }
+    return render(request, 'listings/listing.html', context)
 
 def search(request):
     return render(request, 'listings/search.html')
