@@ -22,6 +22,7 @@ price_choices = {
 }
 
 state_choices = {
+                      "ALL":"State (All)",
                       "AK":"Alaska",
                       "AZ":"Arizona",
                       "AR":"Arkansas",
